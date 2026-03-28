@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Student Profile Management System</h1>
+            <p>Register your academic profile</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Registration Form -->
+            <div class="form-section">
+                <h2>Student Registration</h2>
+                <form id="studentForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registrationNumber">Registration Number *</label>
+                        <input type="text" id="registrationNumber" name="registrationNumber" required 
+                               placeholder="e.g., 2024CS001">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course/Program *</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select Course</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Data Science">Data Science</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semester">Semester</label>
+                        <input type="number" id="semester" name="semester" min="1" max="8">
+                    </div>
+
+                    <button type="submit" class="btn-submit">Register Student</button>
+                </form>
+                <div id="message" class="message"></div>
+            </div>
+
+            <!-- Display Section -->
+            <div class="display-section">
+                <h2>Registered Students</h2>
+                <button id="loadStudents" class="btn-load">Load Students</button>
+                <div id="studentsList" class="students-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
